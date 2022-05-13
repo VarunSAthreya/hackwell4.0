@@ -6,7 +6,7 @@ const Logo: FC = () => {
         <Box>
             <Link href="/" _focus={{ outline: 'none' }}>
                 <Image
-                    src={'/../assests/images/Logo/Hackwell_logo.png'}
+                    src={'/../assets/images/Logo/Hackwell_logo.png'}
                     alt="Logo"
                     maxW={'150px'}
                     h={'auto'}

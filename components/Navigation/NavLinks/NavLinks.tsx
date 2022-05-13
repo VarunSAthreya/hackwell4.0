@@ -1,6 +1,5 @@
 import { keyframes, Link, usePrefersReducedMotion } from '@chakra-ui/react';
 import { FC, ReactNode } from 'react';
-// import { Link } from 'react-scroll';
 
 const fill = keyframes`
 0% {
@@ -18,7 +17,11 @@ const fill = keyframes`
   }
 `;
 
-const NavLink: FC = ({ children }: { children: ReactNode }) => {
+type Props = {
+    children: ReactNode;
+};
+
+const NavLink: FC<Props> = ({ children }) => {
     const prefersReducedMotion = usePrefersReducedMotion();
     const animation = prefersReducedMotion
         ? undefined
@@ -27,7 +30,6 @@ const NavLink: FC = ({ children }: { children: ReactNode }) => {
     return (
         <Link
             px={2}
-            // smooth={true}
             py={1}
             _hover={{
                 textDecoration: 'none',
@@ -61,7 +63,6 @@ const NavLink: FC = ({ children }: { children: ReactNode }) => {
                     opacity: 1,
                 },
             }}
-            // to={children.toString().toLowerCase()}
             href={`/#${children.toString().toLowerCase()}`}
         >
             {children}
