@@ -8,10 +8,10 @@ import {
     StackDivider,
     Text,
 } from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Canvas from '../components/UI/Canvas/Canvas';
 
-const Main = () => {
+const Main: FC = () => {
     const [finished, setFinished] = useState(false);
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
@@ -19,7 +19,7 @@ const Main = () => {
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
-        const target = new Date('04/27/2022 00:00:00');
+        const target = new Date('06/22/2022 00:00:00');
         const interval = setInterval(() => {
             const now = new Date();
             const difference = target.getTime() - now.getTime();
@@ -64,7 +64,7 @@ const Main = () => {
                     </Text>
                     <Box>
                         <Image
-                            src={'../assests/images/Logo/Hackwell_logo.png'}
+                            src={'../assets/images/Logo/Hackwell_logo.png'}
                             width={{ base: '300px', lg: '550px' }}
                             height={{ base: '100px', lg: '130px' }}
                         />
@@ -157,7 +157,7 @@ const Main = () => {
                                 <Image
                                     width={{ base: '200px', md: '300px' }}
                                     src={
-                                        '../assests/images/Logo/Honeywell_logo.png'
+                                        '../assets/images/Logo/Honeywell_logo.png'
                                     }
                                 />
                             </Heading>
