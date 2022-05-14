@@ -75,7 +75,7 @@ const Footer: FC = () => {
                 align={{ base: 'center', md: 'center' }}
             >
                 <Stack direction={'row'}>
-                    <Text>© 2022 HackWell 3.0</Text>
+                    <Text>© 2022 HackWell 4.0</Text>
                     <Text>All rights reserved</Text>
                 </Stack>
                 <Stack direction={'row'} spacing={10}>

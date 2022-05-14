@@ -23,7 +23,7 @@ import NavLink from './NavLinks/NavLinks';
 
 const Links = [
     'About Jssate-B',
-    'Hackwell 3.0',
+    'Hackwell 4.0',
     'Domains',
     'Phases',
     'Sponsor',

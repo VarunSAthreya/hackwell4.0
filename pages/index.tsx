@@ -16,7 +16,7 @@ const Home: NextPage = () => {
             <Main />
             {/*ABOUT JSSATEB*/}
             <About />
-            {/*Hackwell 3.0*/}
+            {/*Hackwell 4.0*/}
             <Hackwell />
             {/*THEMES*/}
             <Themes />

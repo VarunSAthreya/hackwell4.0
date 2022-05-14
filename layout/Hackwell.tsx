@@ -24,7 +24,7 @@ const Hackwell: FC = () => {
             minH={'75vh'}
             direction={{ base: 'column' }}
             my={10}
-            id="hackwell 3.0"
+            id="hackwell 4.0"
             spacing={{ base: 10, lg: 20 }}
             variants={stack}
             initial="hidden"
@@ -56,7 +56,7 @@ const Hackwell: FC = () => {
                         padding="1rem"
                         transform="translateZ(-10px)"
                     >
-                        ABOUT HACKWELL 3.0
+                        ABOUT HACKWELL 4.0
                     </Heading>
                 </Box>
                 <MotionDivider
@@ -89,7 +89,7 @@ const Hackwell: FC = () => {
                         textAlign={{ base: 'center', lg: 'left' }}
                         lineHeight={1.6}
                     >
-                        Hackwell 3.0 is a 48-hour Hackathon hosted by JSSATEB in
+                        Hackwell 4.0 is a 48-hour Hackathon hosted by JSSATEB in
                         association with Honeywell.
                     </Text>
                     <Text

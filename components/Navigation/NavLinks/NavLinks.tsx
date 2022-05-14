@@ -1,5 +1,5 @@
 import { keyframes, Link, usePrefersReducedMotion } from '@chakra-ui/react';
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
 const fill = keyframes`
 0% {
@@ -18,7 +18,7 @@ const fill = keyframes`
 `;
 
 type Props = {
-    children: ReactNode;
+    children: String;
 };
 
 const NavLink: FC<Props> = ({ children }) => {
