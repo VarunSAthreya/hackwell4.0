@@ -16,15 +16,13 @@ interface IMember {
     language: string;
     project: string;
     hackathonprev: string;
-
-    // resume: File;
 }
 
 interface ITeam {
     teamName: string;
     college: string;
     teamSize: number;
-    // paymentId: string;
+    paymentId: string;
     sendRegisterMail: boolean;
     createdAt: string;
     member1: IMember;

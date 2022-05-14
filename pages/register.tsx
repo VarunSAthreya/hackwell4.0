@@ -8,9 +8,11 @@ import {
     Grid,
     GridItem,
     Heading,
+    Icon,
     Input,
     InputGroup,
     InputLeftAddon,
+    Link,
     Select,
     Spinner,
     Stack,
@@ -23,6 +25,7 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { BiNotepad } from 'react-icons/bi';
 import { ITeam } from '../@types';
 import { db } from '../lib/firebase';
 
@@ -42,7 +45,7 @@ const Register: NextPage = () => {
     const toast = useToast();
 
     const onSubmit = async (data: ITeam) => {
-        if (new Date() > new Date('2022-04-26')) {
+        if (new Date() > new Date('2022-06-15')) {
             toast({
                 title: 'Registration Closed',
                 description: 'Sorry, registration is closed for this year',
@@ -1679,6 +1682,114 @@ const Register: NextPage = () => {
                                         </Box>
                                     </GridItem>*/}
                                 </Grid>
+                                {/* Payment Details */}
+                                <Grid templateColumns="repeat(2, 1fr)">
+                                    <GridItem
+                                        p={{ base: 1, md: 4 }}
+                                        py={5}
+                                        colSpan={2}
+                                    >
+                                        <Flex
+                                            alignItems={'center'}
+                                            justifyContent={'center'}
+                                        >
+                                            <Divider
+                                                bg={'#CC01FF'}
+                                                height={'2px'}
+                                                width={'10%'}
+                                            />
+                                            <Text
+                                                bgGradient={
+                                                    'linear(to-l, #00FFDD,#CC01FF)'
+                                                }
+                                                bgClip="text"
+                                                fontSize="3xl"
+                                                mx={2}
+                                                fontWeight="extrabold"
+                                                textAlign={'center'}
+                                                textTransform={'uppercase'}
+                                            >
+                                                Payment Details
+                                            </Text>
+                                            <Divider
+                                                bg={'#CC01FF'}
+                                                height={'2px'}
+                                                width={'10%'}
+                                            />
+                                        </Flex>
+                                    </GridItem>
+                                    <GridItem p={4} colSpan={2}>
+                                        <Box
+                                            display={'flex'}
+                                            alignItems={'center'}
+                                            bg={'white'}
+                                            padding={3}
+                                            borderRadius={'10px'}
+                                        >
+                                            <Text
+                                                color={'#CC01FF'}
+                                                _focus={{ outline: 'none' }}
+                                            >
+                                                Note: Finish Payment by clicking
+                                                the link below. Then paste the
+                                                payment id in the field. ₹100
+                                                per team member.
+                                            </Text>
+                                        </Box>
+                                    </GridItem>
+                                    <GridItem p={4} colSpan={2}>
+                                        <Box
+                                            display={'flex'}
+                                            alignItems={'center'}
+                                            bg={'white'}
+                                            padding={3}
+                                            borderRadius={'10px'}
+                                        >
+                                            <Icon
+                                                as={BiNotepad}
+                                                color={'#CC01FF'}
+                                                mr={5}
+                                            />
+                                            <Link
+                                                color={'#CC01FF'}
+                                                href={
+                                                    'https://rzp.io/l/d6HXzspc'
+                                                }
+                                                _focus={{ outline: 'none' }}
+                                                isExternal
+                                            >
+                                                Click Here To Pay
+                                            </Link>
+                                        </Box>
+                                    </GridItem>
+                                    <GridItem p={4} colSpan={2}>
+                                        <FormControl
+                                            isInvalid={
+                                                errors.paymentId !== undefined
+                                            }
+                                        >
+                                            <InputGroup>
+                                                <InputLeftAddon>
+                                                    Payment ID:
+                                                </InputLeftAddon>
+                                                <Input
+                                                    type="text"
+                                                    placeholder="Payment ID"
+                                                    {...register('paymentId', {
+                                                        required:
+                                                            'Please Enter The Payment ID',
+                                                    })}
+                                                />
+                                            </InputGroup>
+
+                                            <FormErrorMessage>
+                                                {errors.paymentId &&
+                                                    errors.paymentId.message}
+                                            </FormErrorMessage>
+                                        </FormControl>
+                                    </GridItem>
+                                </Grid>
+                                {/* Register Button */}
                                 <Grid templateColumns="repeat(2, 1fr)">
                                     <GridItem p={4} colSpan={2} mt={4}>
                                         <Flex justify={'center'}>
