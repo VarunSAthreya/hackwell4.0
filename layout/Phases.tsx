@@ -1,9 +1,9 @@
 import {
     Box,
+    Center,
     Divider,
     DividerProps,
     Flex,
-    Grid,
     GridItem,
     GridItemProps,
     Heading,
@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import React, { FC } from 'react';
-import { divider, gridItem, secondaryGridItem, stack } from '../util/variants';
+import { divider, gridItem, stack } from '../util/variants';
 
 const Phases: FC = () => {
     const MotionDivider = motion<DividerProps>(Divider);
@@ -59,7 +59,7 @@ const Phases: FC = () => {
                         padding="1rem"
                         transform="translateZ(-10px)"
                     >
-                        HACKWELL 3.0 PHASES
+                        HACKWELL 4.0 PHASES
                     </Heading>
                 </Box>
                 <MotionDivider
@@ -71,13 +71,11 @@ const Phases: FC = () => {
                     variants={divider}
                 />
             </Flex>
-            <Box p={{ base: 6, lg: 16 }} pb={4}>
-                <Grid
-                    templateColumns={{
-                        base: 'repeat(1, 1fr)',
-                        lg: 'repeat(2, 1fr)',
-                    }}
-                    gap={6}
+            <Center>
+                <Box
+                    p={{ base: 6, lg: 16 }}
+                    pb={4}
+                    width={{ base: '95%', lg: '800px' }}
                 >
                     <MotionGridItem
                         colSpan={1}
@@ -98,7 +96,7 @@ const Phases: FC = () => {
                             textAlign={'center'}
                             fontSize={'3xl'}
                         >
-                            Phase 1
+                            Phases
                         </Heading>
                         <Stack spacing={5} p={3}>
                             <Box
@@ -154,7 +152,9 @@ const Phases: FC = () => {
                                 justifyContent={'space-between'}
                             >
                                 <Image
-                                    src={'../assets/images/Phases/search.png'}
+                                    src={
+                                        '../assets/images/Phases/payment-method.png'
+                                    }
                                     boxSize={'50px'}
                                 />
                                 <Box>
@@ -163,95 +163,8 @@ const Phases: FC = () => {
                                             'linear(to-l, #00FFDD,#CC01FF)'
                                         }
                                         bgClip="text"
+                                        mb={2}
                                         textAlign={'right'}
-                                        textTransform={'uppercase'}
-                                        fontSize={{ base: 'lg', lg: '2xl' }}
-                                        mb={2}
-                                    >
-                                        Team profile screening
-                                    </Heading>
-                                    <Text
-                                        textAlign={'right'}
-                                        fontSize={{ base: 'sm', lg: 'md' }}
-                                        color={'gray.700'}
-                                        lineHeight={1.6}
-                                    >
-                                        The submitted team profile will be
-                                        screened to shortlist the teams for
-                                        phase 2.
-                                    </Text>
-                                </Box>
-                            </Box>
-                            <Box
-                                p={{ base: 2, lg: 4 }}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'space-between'}
-                            >
-                                <Box>
-                                    <Heading
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
-                                        mb={2}
-                                        textTransform={'uppercase'}
-                                        fontSize={{ base: 'lg', lg: '2xl' }}
-                                    >
-                                        selection confirmation
-                                    </Heading>
-                                    <Text
-                                        fontSize={{ base: 'sm', lg: 'md' }}
-                                        color={'gray.700'}
-                                        lineHeight={1.6}
-                                    >
-                                        The shortlisted teams for phase 2 will
-                                        receive a confirmation email.
-                                    </Text>
-                                </Box>
-                                <Image
-                                    ml={1}
-                                    src={'../assets/images/Phases/mail.png'}
-                                    boxSize={'50px'}
-                                />
-                            </Box>
-                        </Stack>
-                    </MotionGridItem>
-                    <MotionGridItem
-                        colSpan={1}
-                        rounded={10}
-                        backgroundColor={'white'}
-                        boxShadow={'#CC01FF 0px 5px 15px'}
-                        whileInView="whileInView"
-                        viewport={{ once: true }}
-                        variants={secondaryGridItem}
-                    >
-                        <Heading
-                            textTransform={'uppercase'}
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                            roundedTopRight={10}
-                            roundedTopLeft={10}
-                            color={'white'}
-                            p={5}
-                            textAlign={'center'}
-                            fontSize={'3xl'}
-                        >
-                            Phase 2
-                        </Heading>
-                        <Stack spacing={5} p={3}>
-                            <Box
-                                p={{ base: 2, lg: 4 }}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'space-between'}
-                            >
-                                <Box>
-                                    <Heading
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
-                                        mb={2}
                                         textTransform={'uppercase'}
                                         fontSize={{ base: 'lg', lg: '2xl' }}
                                     >
@@ -266,10 +179,37 @@ const Phases: FC = () => {
                                         registration fee of INR 250.
                                     </Text>
                                 </Box>
+                            </Box>
+                            <Box
+                                p={{ base: 2, lg: 4 }}
+                                display={'flex'}
+                                alignItems={'center'}
+                                justifyContent={'space-between'}
+                            >
+                                <Box>
+                                    <Heading
+                                        bgGradient={
+                                            'linear(to-l, #00FFDD,#CC01FF)'
+                                        }
+                                        bgClip="text"
+                                        mb={2}
+                                        textTransform={'uppercase'}
+                                        fontSize={{ base: 'lg', lg: '2xl' }}
+                                    >
+                                        confirmation email
+                                    </Heading>
+                                    <Text
+                                        fontSize={{ base: 'sm', lg: 'md' }}
+                                        color={'gray.700'}
+                                        lineHeight={1.6}
+                                    >
+                                        The teams will receive a conformation
+                                        email.
+                                    </Text>
+                                </Box>
                                 <Image
-                                    src={
-                                        '../assets/images/Phases/payment-method.png'
-                                    }
+                                    ml={1}
+                                    src={'../assets/images/Phases/mail.png'}
                                     boxSize={'50px'}
                                 />
                             </Box>
@@ -312,8 +252,8 @@ const Phases: FC = () => {
                             </Box>
                         </Stack>
                     </MotionGridItem>
-                </Grid>
-            </Box>
+                </Box>
+            </Center>
         </MotionStack>
     );
 };

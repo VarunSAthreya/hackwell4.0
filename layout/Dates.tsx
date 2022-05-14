@@ -100,7 +100,7 @@ const Dates: FC = () => {
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
-                            12th - 21st
+                            JUNE 5th
                         </Heading>
                         <Text
                             color={'gray.500'}
@@ -139,14 +139,14 @@ const Dates: FC = () => {
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
-                            22nd - 25th
+                            JUNE 15th
                         </Heading>
                         <Text
                             color={'gray.500'}
                             textTransform="uppercase"
                             textAlign={'center'}
                         >
-                            Announcement of Shortlisted Teams
+                            Online Registration Ends
                         </Text>
                     </MotionStack>
                     <MotionStack
@@ -178,7 +178,7 @@ const Dates: FC = () => {
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
-                            27th
+                            JUNE 22nd
                         </Heading>
                         <Text
                             color={'gray.500'}
@@ -217,7 +217,7 @@ const Dates: FC = () => {
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
-                            29th
+                            JUNE 24th
                         </Heading>
                         <Text
                             color={'gray.500'}
