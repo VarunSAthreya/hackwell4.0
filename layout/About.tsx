@@ -68,7 +68,7 @@ const About: FC = () => {
                         padding="1rem"
                         transform="translateZ(-10px)"
                     >
-                        About JSSATEB
+                        ABOUT JSSATEB
                     </Heading>
                 </Box>
                 <MotionDivider

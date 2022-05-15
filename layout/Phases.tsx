@@ -176,7 +176,8 @@ const Phases: FC = () => {
                                         lineHeight={1.6}
                                     >
                                         Shortlisted students must pay a
-                                        registration fee of INR 250.
+                                        registration fee of INR 100 per team
+                                        member.
                                     </Text>
                                 </Box>
                             </Box>
