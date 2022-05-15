@@ -1,6 +1,8 @@
 import {
     Box,
     Container,
+    Divider,
+    DividerProps,
     Flex,
     HStack,
     Icon,
@@ -9,6 +11,7 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { FC } from 'react';
 import {
     AiFillFacebook,
@@ -18,10 +21,13 @@ import {
 } from 'react-icons/ai';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { ISocialMedia } from '../../@types';
+import { footerDivider } from '../../util/variants';
 import Logo from '../UI/Logo/Logo';
 import SocialMedia from '../UI/SocialMedia/SocialMedia';
 
 const Footer: FC = () => {
+    const MotionDivider = motion<DividerProps>(Divider);
+
     const Social: ISocialMedia[] = [
         {
             icon: AiOutlineMail,
@@ -47,22 +53,30 @@ const Footer: FC = () => {
 
     return (
         <Box p={18} color={useColorModeValue('gray.700', 'gray.200')}>
-            <Flex
-                align={'center'}
-                _before={{
-                    content: '""',
-                    borderBottom: '2px solid #CC01FF',
-                    flexGrow: 1,
-                    mr: 8,
-                }}
-                _after={{
-                    content: '""',
-                    borderBottom: '2px solid #CC01FF',
-                    flexGrow: 1,
-                    ml: 8,
-                }}
-            >
+            <Flex alignItems={'center'} justifyContent={'center'}>
+                <MotionDivider
+                    bg={'#CC01FF'}
+                    height={'2px'}
+                    width={'90%'}
+                    initial="hidden"
+                    whileInView="whileInView"
+                    viewport={{ once: true }}
+                    variants={footerDivider}
+                    mr={2}
+                />
+
                 <Logo />
+
+                <MotionDivider
+                    bg={'#CC01FF'}
+                    height={'2px'}
+                    width={'90%'}
+                    initial="hidden"
+                    whileInView="whileInView"
+                    viewport={{ once: true }}
+                    variants={footerDivider}
+                    ml={2}
+                />
             </Flex>
             <Container
                 as={Stack}

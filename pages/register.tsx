@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Divider,
+    DividerProps,
     Flex,
     FormControl,
     FormErrorMessage,
@@ -21,6 +22,7 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { motion } from 'framer-motion';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
@@ -28,8 +30,11 @@ import { useForm } from 'react-hook-form';
 import { BiNotepad } from 'react-icons/bi';
 import { ITeam } from '../@types';
 import { db } from '../lib/firebase';
+import { divider, secondaryDivider } from '../util/variants';
 
 const Register: NextPage = () => {
+    const MotionDivider = motion<DividerProps>(Divider);
+
     const {
         register,
         handleSubmit,
@@ -98,17 +103,24 @@ const Register: NextPage = () => {
                 position={'relative'}
                 top={{ base: '140px', md: '160px' }}
             >
-                <Divider bg={'#CC01FF'} height={'2px'} />
+                <MotionDivider
+                    bg={'#CC01FF'}
+                    height={'2px'}
+                    initial="hidden"
+                    whileInView="whileInView"
+                    viewport={{ once: true }}
+                    variants={divider}
+                />
                 <Box
                     border="2px solid #CC01FF"
-                    width={{ base: '220px', lg: '400px' }}
+                    width={{ base: '220px', lg: '500px' }}
                 >
                     <Heading
-                        fontSize={{ base: '1.1rem', md: '4xl' }}
+                        fontSize={{ base: '1.2rem', md: '4xl' }}
                         textAlign={'center'}
                         border={'2px solid #CC01FF'}
                         p={3}
-                        width={{ base: '220px', lg: '400px' }}
+                        width={{ base: '220px', lg: '500px' }}
                         position="relative"
                         top="7px"
                         left="7px"
@@ -118,7 +130,14 @@ const Register: NextPage = () => {
                         REGISTER
                     </Heading>
                 </Box>
-                <Divider bg={'#CC01FF'} height={'2px'} />
+                <MotionDivider
+                    bg={'#CC01FF'}
+                    height={'2px'}
+                    initial="hidden"
+                    whileInView="whileInView"
+                    viewport={{ once: true }}
+                    variants={divider}
+                />
             </Flex>
             <Flex>
                 <Box
@@ -148,10 +167,14 @@ const Register: NextPage = () => {
                                             alignItems={'center'}
                                             justifyContent={'center'}
                                         >
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                             <Text
                                                 bgGradient={
@@ -166,10 +189,14 @@ const Register: NextPage = () => {
                                             >
                                                 Team Details
                                             </Text>
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                         </Flex>
                                     </GridItem>
@@ -273,20 +300,21 @@ const Register: NextPage = () => {
                                             alignItems={'center'}
                                             justifyContent={'center'}
                                         >
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                             <Text
                                                 bgGradient={
                                                     'linear(to-l, #00FFDD,#CC01FF)'
                                                 }
                                                 bgClip="text"
-                                                fontSize={{
-                                                    base: '2xl',
-                                                    md: '3xl',
-                                                }}
+                                                fontSize="3xl"
                                                 mx={2}
                                                 fontWeight="extrabold"
                                                 textAlign={'center'}
@@ -294,10 +322,14 @@ const Register: NextPage = () => {
                                             >
                                                 Members Details
                                             </Text>
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                         </Flex>
                                     </GridItem>
@@ -1693,10 +1725,14 @@ const Register: NextPage = () => {
                                             alignItems={'center'}
                                             justifyContent={'center'}
                                         >
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                             <Text
                                                 bgGradient={
@@ -1711,10 +1747,14 @@ const Register: NextPage = () => {
                                             >
                                                 Payment Details
                                             </Text>
-                                            <Divider
+                                            <MotionDivider
                                                 bg={'#CC01FF'}
                                                 height={'2px'}
                                                 width={'10%'}
+                                                initial="hidden"
+                                                whileInView="whileInView"
+                                                viewport={{ once: true }}
+                                                variants={secondaryDivider}
                                             />
                                         </Flex>
                                     </GridItem>
@@ -1729,6 +1769,7 @@ const Register: NextPage = () => {
                                             <Text
                                                 color={'#CC01FF'}
                                                 _focus={{ outline: 'none' }}
+                                                fontWeight="medium"
                                             >
                                                 Note: Finish Payment by clicking
                                                 the link below. Then paste the
@@ -1756,6 +1797,7 @@ const Register: NextPage = () => {
                                                     'https://rzp.io/l/d6HXzspc'
                                                 }
                                                 _focus={{ outline: 'none' }}
+                                                fontWeight="medium"
                                                 isExternal
                                             >
                                                 Click Here To Pay
