@@ -175,9 +175,8 @@ const Phases: FC = () => {
                                         color={'gray.700'}
                                         lineHeight={1.6}
                                     >
-                                        Shortlisted students must pay a
-                                        registration fee of INR 100 per team
-                                        member.
+                                        Students must pay a registration fee of
+                                        INR 100 per team member.
                                     </Text>
                                 </Box>
                             </Box>
@@ -245,9 +244,9 @@ const Phases: FC = () => {
                                         color={'gray.700'}
                                         lineHeight={1.6}
                                     >
-                                        The shortlisted teams will be hacking on
-                                        the problem statements given on the day
-                                        of the event.
+                                        The teams will be hacking on the problem
+                                        statements given on the day of the
+                                        event.
                                     </Text>
                                 </Box>
                             </Box>
