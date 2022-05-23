@@ -239,3 +239,26 @@ export const ternaryStack = {
         y: 80,
     },
 };
+
+export const InViewStepperDivider = {
+    hidden: { height: 0 },
+    whileInView: {
+        height: '100%',
+        transition: {
+            delay: 0.2,
+            duration: 0.8,
+        },
+    },
+};
+
+export const StepperBox = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.4,
+            duration: 0.8,
+        },
+    },
+};
