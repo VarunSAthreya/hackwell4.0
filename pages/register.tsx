@@ -43,7 +43,6 @@ const Register: NextPage = () => {
     } = useForm<ITeam>();
     const router = useRouter();
 
-    const tsize = ['S', 'M', 'L'];
     const teamSize = [1, 2, 3, 4];
     const year = [1, 2, 3, 4];
     const [isLoading, setIsLoading] = useState(false);
@@ -66,7 +65,7 @@ const Register: NextPage = () => {
         data.sendRegisterMail = false;
         setIsLoading(true);
         const documentSnapshot = await getDoc(
-            doc(db, 'registered_teams', data.teamName)
+            doc(db, 'hackwell4', data.teamName)
         );
 
         if (documentSnapshot.exists()) {
@@ -78,7 +77,7 @@ const Register: NextPage = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return;
         }
-        await setDoc(doc(db, 'registered_teams', data.teamName), data);
+        await setDoc(doc(db, 'hackwell4', data.teamName), data);
 
         toast({
             title: 'Registration Successful',
@@ -532,170 +531,7 @@ const Register: NextPage = () => {
                                             </FormErrorMessage>
                                         </FormControl>
                                     </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member1?.tsize !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon>
-                                                    TShirt Size:
-                                                </InputLeftAddon>
-                                                <Select
-                                                    rounded={0}
-                                                    placeholder="TShirt Size"
-                                                    {...register(
-                                                        'member1.tsize',
-                                                        {
-                                                            required:
-                                                                'Please Enter The tshirt size',
-                                                        }
-                                                    )}
-                                                >
-                                                    {tsize.map((br) => (
-                                                        <option
-                                                            value={br}
-                                                            key={br}
-                                                        >
-                                                            {br}
-                                                        </option>
-                                                    ))}
-                                                </Select>
-                                            </InputGroup>
 
-                                            <FormErrorMessage>
-                                                {errors.member1?.year &&
-                                                    errors.member1?.year
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member1?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Language:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="C++,Python,Java..."
-                                                    {...register(
-                                                        'member1.language',
-                                                        {
-                                                            required:
-                                                                'Please enter valid languages',
-                                                        }
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member1?.language &&
-                                                    errors.member1?.language
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member1?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Project Details:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Project: Description"
-                                                    {...register(
-                                                        'member1.project',
-                                                        {
-                                                            required:
-                                                                'Please enter your project Details',
-                                                        }
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member1?.project &&
-                                                    errors.member1?.project
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member1
-                                                    ?.hackathonprev !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Previous Hackathon:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Other Hackathons attended..."
-                                                    {...register(
-                                                        'member1.hackathonprev',
-                                                        {
-                                                            required:
-                                                                'Please enter your project Details',
-                                                        }
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member1
-                                                    ?.hackathonprev &&
-                                                    errors.member1
-                                                        ?.hackathonprev.message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem>
-                                    {/* <GridItem p={4}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member1?.resume !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon
-
-                                                >
-                                                    Resume:
-                                                </InputLeftAddon>
-                                                <Input
-
-                                                    type="file"
-                                                    placeholder="Resume"
-                                                    {...register(
-                                                        'member1.resume',
-                                                        {
-                                                            required:
-                                                                'Please enter the resume',
-                                                        }
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member1?.resume &&
-                                                    errors.member1?.resume
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem> */}
                                     <GridItem p={4} colSpan={2}>
                                         <Text
                                             bgGradient={
@@ -865,118 +701,7 @@ const Register: NextPage = () => {
                                             </FormErrorMessage>
                                         </FormControl>
                                     </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.tsize !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon>
-                                                    TShirt Size:
-                                                </InputLeftAddon>
-                                                <Select
-                                                    rounded={0}
-                                                    placeholder="TShirt Size"
-                                                    {...register(
-                                                        'member2.tsize'
-                                                    )}
-                                                >
-                                                    {tsize.map((br) => (
-                                                        <option
-                                                            value={br}
-                                                            key={br}
-                                                        >
-                                                            {br}
-                                                        </option>
-                                                    ))}
-                                                </Select>
-                                            </InputGroup>
 
-                                            <FormErrorMessage>
-                                                {errors.member2?.year &&
-                                                    errors.member2?.year
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Language:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="C++,Python,Java..."
-                                                    {...register(
-                                                        'member2.language'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member2?.language &&
-                                                    errors.member2?.language
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Project Details:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Project: Description"
-                                                    {...register(
-                                                        'member2.project'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member2?.project &&
-                                                    errors.member2?.project
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Previous Hackathon:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Other Hackathons attended..."
-                                                    {...register(
-                                                        'member2.hackathonprev'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member2
-                                                    ?.hackathonprev &&
-                                                    errors.member2
-                                                        ?.hackathonprev.message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem>
                                     {/* <GridItem p={4}>
                                         <FormControl
                                             isInvalid={
@@ -1176,148 +901,7 @@ const Register: NextPage = () => {
                                             </FormErrorMessage>
                                         </FormControl>
                                     </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member3?.tsize !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon>
-                                                    TShirt Size:
-                                                </InputLeftAddon>
-                                                <Select
-                                                    rounded={0}
-                                                    placeholder="TShirt Size"
-                                                    {...register(
-                                                        'member3.tsize'
-                                                    )}
-                                                >
-                                                    {tsize.map((br) => (
-                                                        <option
-                                                            value={br}
-                                                            key={br}
-                                                        >
-                                                            {br}
-                                                        </option>
-                                                    ))}
-                                                </Select>
-                                            </InputGroup>
 
-                                            <FormErrorMessage>
-                                                {errors.member3?.year &&
-                                                    errors.member3?.year
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member3?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Language:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="C++,Python,Java..."
-                                                    {...register(
-                                                        'member3.language'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member3?.language &&
-                                                    errors.member3?.language
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member3?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Project Details:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Project: Description"
-                                                    {...register(
-                                                        'member3.project'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member3?.project &&
-                                                    errors.member3?.project
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Previous Hackathon:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Other Hackathons attended..."
-                                                    {...register(
-                                                        'member3.hackathonprev'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member3
-                                                    ?.hackathonprev &&
-                                                    errors.member3
-                                                        ?.hackathonprev.message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem>
-                                    {/* <GridItem p={4}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member3?.resume !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon
-
-                                                >
-                                                    Resume:
-                                                </InputLeftAddon>
-                                                <Input
-
-                                                    type="file"
-                                                    placeholder="Resume"
-                                                    {...register(
-                                                        'member3.resume'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member3?.resume &&
-                                                    errors.member3?.resume
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem> */}
                                     <GridItem p={4} colSpan={2}>
                                         <Text
                                             bgGradient={
@@ -1487,232 +1071,6 @@ const Register: NextPage = () => {
                                             </FormErrorMessage>
                                         </FormControl>
                                     </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member4?.tsize !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon>
-                                                    TShirt Size:
-                                                </InputLeftAddon>
-                                                <Select
-                                                    rounded={0}
-                                                    placeholder="TShirt Size"
-                                                    {...register(
-                                                        'member4.tsize'
-                                                    )}
-                                                >
-                                                    {tsize.map((br) => (
-                                                        <option
-                                                            value={br}
-                                                            key={br}
-                                                        >
-                                                            {br}
-                                                        </option>
-                                                    ))}
-                                                </Select>
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member4?.year &&
-                                                    errors.member4?.year
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member4?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Language:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="C++,Python,Java..."
-                                                    {...register(
-                                                        'member4.language'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member4?.language &&
-                                                    errors.member4?.language
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member4?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Project Details:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Project: Description"
-                                                    {...register(
-                                                        'member4.project'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member4?.project &&
-                                                    errors.member4?.project
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member2?.address !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup pt={8}>
-                                                <InputLeftAddon>
-                                                    Previous Hackathon:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Other Hackathons attended..."
-                                                    {...register(
-                                                        'member4.hackathonprev'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member4
-                                                    ?.hackathonprev &&
-                                                    errors.member4
-                                                        ?.hackathonprev.message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem>
-                                    {/* <GridItem p={4}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.member4?.resume !==
-                                                undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon
-
-                                                >
-                                                    Resume:
-                                                </InputLeftAddon>
-                                                <Input
-
-                                                    type="file"
-                                                    placeholder="Resume"
-                                                    {...register(
-                                                        'member4.resume'
-                                                    )}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.member4?.resume &&
-                                                    errors.member4?.resume
-                                                        .message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem> */}
-                                    {/*<GridItem
-                                        p={{ base: 1, md: 4 }}
-                                        py={5}
-                                        colSpan={2}
-                                    >
-                                        <Flex
-                                            alignItems={'center'}
-                                            justifyContent={'center'}
-                                        >
-                                            <Divider
-                                                bg={'#CC01FF'}
-                                                height={'2px'}
-                                                width={'10%'}
-                                            />
-                                            <Text
-                                                bgGradient={
-                                                    'linear(to-l, #00FFDD,#CC01FF)'
-                                                }
-                                                bgClip="text"
-                                                fontSize="3xl"
-                                                mx={2}
-                                                fontWeight="extrabold"
-                                                textAlign={'center'}
-                                                textTransform={'uppercase'}
-                                            >
-                                                Payment Details
-                                            </Text>
-                                            <Divider
-                                                bg={'#CC01FF'}
-                                                height={'2px'}
-                                                width={'10%'}
-                                            />
-                                        </Flex>
-                                    </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <FormControl
-                                            isInvalid={
-                                                errors.paymentId !== undefined
-                                            }
-                                        >
-                                            <InputGroup>
-                                                <InputLeftAddon>
-                                                    Razorpay Payment Id:
-                                                </InputLeftAddon>
-                                                <Input
-                                                    type="text"
-                                                    placeholder="Razorpay Payment Id"
-                                                    {...register('paymentId', {
-                                                        required:
-                                                            'Please Enter The Payment ID',
-                                                    })}
-                                                />
-                                            </InputGroup>
-
-                                            <FormErrorMessage>
-                                                {errors.paymentId &&
-                                                    errors.paymentId.message}
-                                            </FormErrorMessage>
-                                        </FormControl>
-                                    </GridItem>
-                                    <GridItem p={4} colSpan={2}>
-                                        <Box
-                                            display={'flex'}
-                                            alignItems={'center'}
-                                            bg={'white'}
-                                            padding={3}
-                                            borderRadius={'10px'}
-                                        >
-                                            <Icon
-                                                as={BiNotepad}
-                                                color={'#CC01FF'}
-                                                mr={5}
-                                            />
-                                            <Link
-                                                color={'#CC01FF'}
-                                                href={
-                                                    'https://rzp.io/l/FxLro0IXf'
-                                                }
-                                                _focus={{ outline: 'none' }}
-                                            >
-                                                Click Here To Pay
-                                            </Link>
-                                        </Box>
-                                    </GridItem>*/}
                                 </Grid>
                                 {/* Payment Details */}
                                 <Grid templateColumns="repeat(2, 1fr)">
@@ -1827,6 +1185,42 @@ const Register: NextPage = () => {
                                             <FormErrorMessage>
                                                 {errors.paymentId &&
                                                     errors.paymentId.message}
+                                            </FormErrorMessage>
+                                        </FormControl>
+                                    </GridItem>
+                                    <GridItem p={4} colSpan={2}>
+                                        <FormControl
+                                            isInvalid={
+                                                errors.paidAmount !== undefined
+                                            }
+                                        >
+                                            <InputGroup>
+                                                <InputLeftAddon>
+                                                    Paid Amount:
+                                                </InputLeftAddon>
+                                                <Input
+                                                    type="number"
+                                                    placeholder="Paid Amount"
+                                                    {...register('paidAmount', {
+                                                        required:
+                                                            'Please enter the Paid amount',
+                                                        min: {
+                                                            value: 100,
+                                                            message:
+                                                                'Please enter the Paid amount greater than 100',
+                                                        },
+                                                        max: {
+                                                            value: 400,
+                                                            message:
+                                                                'Pleas enter the Paid amount less than 400',
+                                                        },
+                                                    })}
+                                                />
+                                            </InputGroup>
+
+                                            <FormErrorMessage>
+                                                {errors.paidAmount &&
+                                                    errors.paidAmount.message}
                                             </FormErrorMessage>
                                         </FormControl>
                                     </GridItem>

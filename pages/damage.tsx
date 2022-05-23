@@ -10,9 +10,9 @@ const Damage = () => {
 
     const reset = async () => {
         setIsLoading(true);
-        const querySnapshot = await getDocs(collection(db, 'registered_teams'));
+        const querySnapshot = await getDocs(collection(db, 'hackwell4'));
         querySnapshot.docs.forEach(async (docs) => {
-            await updateDoc(doc(db, 'registered_teams', docs.id), {
+            await updateDoc(doc(db, 'hackwell4', docs.id), {
                 sendRegisterMail: true,
             });
         });

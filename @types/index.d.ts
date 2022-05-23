@@ -12,7 +12,6 @@ interface IMember {
     phone: string;
     year: number;
     address: string;
-    tsize: number;
     language: string;
     project: string;
     hackathonprev: string;
@@ -25,6 +24,7 @@ interface ITeam {
     paymentId: string;
     sendRegisterMail: boolean;
     createdAt: string;
+    paidAmount: number;
     member1: IMember;
     member2?: IMember;
     member3?: IMember;
