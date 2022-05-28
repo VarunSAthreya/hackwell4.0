@@ -89,7 +89,7 @@ const Dates: FC = () => {
                             justify={'center'}
                             color={'white'}
                             rounded={'full'}
-                            bg={'linear-gradient(#00FFDD,#CC01FF)'}
+                            bg={'#CC01FF'}
                             my={2}
                         >
                             <BsCalendarDate />
@@ -127,7 +127,7 @@ const Dates: FC = () => {
                             justify={'center'}
                             color={'white'}
                             rounded={'full'}
-                            bg={'linear-gradient(#00FFDD,#CC01FF)'}
+                            bg={'#CC01FF'}
                             my={2}
                         >
                             <BsCalendarDate />
@@ -165,7 +165,7 @@ const Dates: FC = () => {
                             justify={'center'}
                             color={'white'}
                             rounded={'full'}
-                            bg={'linear-gradient(#00FFDD,#CC01FF)'}
+                            bg={'#CC01FF'}
                             my={2}
                         >
                             <BsCalendarDate />
@@ -203,7 +203,7 @@ const Dates: FC = () => {
                             justify={'center'}
                             color={'white'}
                             rounded={'full'}
-                            bg={'linear-gradient(#00FFDD,#CC01FF)'}
+                            bg={'#CC01FF'}
                             my={2}
                         >
                             <BsCalendarDate />
