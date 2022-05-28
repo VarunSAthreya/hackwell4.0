@@ -95,8 +95,7 @@ const Dates: FC = () => {
                             <BsCalendarDate />
                         </Flex>
                         <Heading
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                            bgClip="text"
+                            color="#CC01FF"
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
@@ -134,8 +133,7 @@ const Dates: FC = () => {
                             <BsCalendarDate />
                         </Flex>
                         <Heading
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                            bgClip="text"
+                            color="#CC01FF"
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
@@ -173,8 +171,7 @@ const Dates: FC = () => {
                             <BsCalendarDate />
                         </Flex>
                         <Heading
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                            bgClip="text"
+                            color="#CC01FF"
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
@@ -212,8 +209,7 @@ const Dates: FC = () => {
                             <BsCalendarDate />
                         </Flex>
                         <Heading
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                            bgClip="text"
+                            color="#CC01FF"
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >

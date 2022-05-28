@@ -88,7 +88,7 @@ const Phases: FC = () => {
                     >
                         <Heading
                             textTransform={'uppercase'}
-                            bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
+                            bgColor="#CC01FF"
                             roundedTopRight={10}
                             roundedTopLeft={10}
                             color={'white'}
@@ -108,10 +108,7 @@ const Phases: FC = () => {
                                 <Box>
                                     <Heading
                                         mb={2}
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
+                                        color="#CC01FF"
                                         textTransform={'uppercase'}
                                         fontSize={{ base: 'lg', lg: '2xl' }}
                                     >
@@ -159,10 +156,7 @@ const Phases: FC = () => {
                                 />
                                 <Box>
                                     <Heading
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
+                                        color="#CC01FF"
                                         mb={2}
                                         textAlign={'right'}
                                         textTransform={'uppercase'}
@@ -188,10 +182,7 @@ const Phases: FC = () => {
                             >
                                 <Box>
                                     <Heading
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
+                                        color="#CC01FF"
                                         mb={2}
                                         textTransform={'uppercase'}
                                         fontSize={{ base: 'lg', lg: '2xl' }}
@@ -227,10 +218,7 @@ const Phases: FC = () => {
                                 />
                                 <Box>
                                     <Heading
-                                        bgGradient={
-                                            'linear(to-l, #00FFDD,#CC01FF)'
-                                        }
-                                        bgClip="text"
+                                        color="#CC01FF"
                                         mb={2}
                                         textAlign={'right'}
                                         textTransform={'uppercase'}

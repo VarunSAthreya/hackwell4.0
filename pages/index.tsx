@@ -3,11 +3,11 @@ import React from 'react';
 import {
     About,
     Dates,
+    Domains,
     Hackwell,
     Main,
     Phases,
     Sponsors,
-    Themes,
 } from '../layout';
 
 const Home: NextPage = () => {
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             {/*Hackwell 4.0*/}
             <Hackwell />
             {/*THEMES*/}
-            <Themes />
+            <Domains />
             {/*PHASES*/}
             <Phases />
             {/*IMPORTANT DATES*/}

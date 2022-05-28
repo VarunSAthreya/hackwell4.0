@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 import React, { FC } from 'react';
 import { box, divider, simpleGrid, stack } from '../util/variants';
 
-const Themes: FC = () => {
+const Domains: FC = () => {
     const MotionDivider = motion<DividerProps>(Divider);
     const MotionStack = motion<StackProps>(Stack);
     const MotionBox = motion<BoxProps>(Box);
@@ -96,8 +96,7 @@ const Themes: FC = () => {
                         fontSize={{ base: '1.2rem', lg: '2rem' }}
                         mt={3}
                         textAlign={'center'}
-                        bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                        bgClip="text"
+                        color="#CC01FF"
                         textTransform={'uppercase'}
                     >
                         Artificial Intelligence
@@ -127,8 +126,7 @@ const Themes: FC = () => {
                         fontSize={{ base: '1.2rem', lg: '2rem' }}
                         mt={3}
                         textAlign={'center'}
-                        bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                        bgClip="text"
+                        color="#CC01FF"
                         textTransform={'uppercase'}
                     >
                         Internet of things
@@ -156,8 +154,7 @@ const Themes: FC = () => {
                         mt={3}
                         fontSize={{ base: '1.2rem', lg: '2rem' }}
                         textAlign={'center'}
-                        bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                        bgClip="text"
+                        color="#CC01FF"
                         textTransform={'uppercase'}
                     >
                         Machine Learning
@@ -185,8 +182,7 @@ const Themes: FC = () => {
                         mt={3}
                         fontSize={{ base: '1.2rem', lg: '2rem' }}
                         textAlign={'center'}
-                        bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                        bgClip="text"
+                        color="#CC01FF"
                         textTransform={'uppercase'}
                     >
                         Edge computing and analysis
@@ -203,4 +199,4 @@ const Themes: FC = () => {
     );
 };
 
-export default Themes;
+export default Domains;

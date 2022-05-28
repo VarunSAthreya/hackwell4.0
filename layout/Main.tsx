@@ -52,8 +52,7 @@ const Main: FC = () => {
                 <Stack spacing={2}>
                     <Text
                         textTransform={'uppercase'}
-                        bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                        bgClip="text"
+                        color="#CC01FF"
                         fontWeight={600}
                         fontSize={{ base: '1rem', md: '2xl' }}
                         p={2}
@@ -79,12 +78,7 @@ const Main: FC = () => {
                             }
                         >
                             <Box>
-                                <Heading
-                                    bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                                    bgClip="text"
-                                >
-                                    {days}
-                                </Heading>
+                                <Heading color="#CC01FF">{days}</Heading>
                                 <Text
                                     color={'white'}
                                     fontSize={{ base: 'md', lg: 'lg' }}
@@ -93,12 +87,7 @@ const Main: FC = () => {
                                 </Text>
                             </Box>
                             <Box>
-                                <Heading
-                                    bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                                    bgClip="text"
-                                >
-                                    {hours}
-                                </Heading>
+                                <Heading color="#CC01FF">{hours}</Heading>
                                 <Text
                                     color={'white'}
                                     fontSize={{ base: 'md', lg: 'lg' }}
@@ -107,12 +96,7 @@ const Main: FC = () => {
                                 </Text>
                             </Box>
                             <Box>
-                                <Heading
-                                    bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                                    bgClip="text"
-                                >
-                                    {minutes}
-                                </Heading>
+                                <Heading color="#CC01FF">{minutes}</Heading>
                                 <Text
                                     color={'white'}
                                     fontSize={{ base: 'md', lg: 'lg' }}
@@ -121,12 +105,7 @@ const Main: FC = () => {
                                 </Text>
                             </Box>
                             <Box>
-                                <Heading
-                                    bgGradient={'linear(to-l, #00FFDD,#CC01FF)'}
-                                    bgClip="text"
-                                >
-                                    {seconds}
-                                </Heading>
+                                <Heading color="#CC01FF">{seconds}</Heading>
                                 <Text
                                     color={'white'}
                                     fontSize={{ base: 'md', lg: 'lg' }}
