@@ -100,7 +100,7 @@ const Dates: FC = () => {
                             fontSize={{ base: '1.2rem', lg: '3xl' }}
                             px={4}
                         >
-                            JUNE 5th
+                            MAY 25th
                         </Heading>
                         <Text
                             color={'gray.500'}
