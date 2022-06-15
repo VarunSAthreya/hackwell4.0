@@ -49,7 +49,7 @@ const Register: NextPage = () => {
     const toast = useToast();
 
     const onSubmit = async (data: ITeam) => {
-        if (new Date() > new Date('2022-06-15')) {
+        if (new Date() > new Date('2022-06-25')) {
             toast({
                 title: 'Registration Closed',
                 description: 'Sorry, registration is closed for this year',
