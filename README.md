@@ -1,4 +1,4 @@
-# [Hackwell 3.0](http://hackwell3-0.vercel.app/)
+# [Hackwell 4.0](http://hackwell4-0.vercel.app/)
 
 Official website for the 4<sup>rd</sup> edition of Hackwell conducted by [JSSATEB](https://jssateb.ac.in/) and [HoneyWell](https://honeywell.com/).
 
